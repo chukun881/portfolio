@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yew Chu Kun — AI / Machine Learning Engineer</title>
-  <meta name="description" content="Portfolio of Yew Chu Kun — AI / machine learning engineer based in Kuala Lumpur, Malaysia. Final-year project on generative models for medical imaging, hackathon winner, Huawei HCIA-AI certified." />
+  <title>Yew Chu Kun — AI engineer &amp; data scientist</title>
+  <meta name="description" content="Portfolio of Yew Chu Kun — AI engineer and data scientist. Recent Computer Science (Data Science) graduate, University Malaysia Sabah; six months as AI Engineer intern at Synoteca Digital, Kuala Lumpur." />
   <meta name="author" content="Yew Chu Kun" />
-  <meta property="og:title" content="Yew Chu Kun — AI / Machine Learning Engineer" />
-  <meta property="og:description" content="Portfolio of Yew Chu Kun — AI / machine learning engineer based in Kuala Lumpur, Malaysia." />
+  <meta property="og:title" content="Yew Chu Kun — AI engineer &amp; data scientist" />
+  <meta property="og:description" content="GANs on MRI slices, a RAG pipeline 400× faster, an LLM agent in production — and the negative findings, reported honestly." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ Header / Nav ============ -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="nav-brand" href="#top" aria-label="Back to top">
-        <span class="nav-monogram" aria-hidden="true">YC</span>
+        <span class="nav-monogram" aria-hidden="true">YCK</span>
         <span class="nav-name">yew chu kun</span>
       </a>
 
@@ -35,10 +34,9 @@
 
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#work">Work</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
@@ -50,224 +48,187 @@
   </header>
 
   <main id="main">
-    <!-- ============ Hero ============ -->
-    <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="hero-eyebrow reveal">Hi, my name is</p>
-        <h1 class="hero-title reveal">Yew Chu Kun<span class="accent-dot">.</span></h1>
-        <p class="hero-role reveal">I build things with data and machine learning<span class="accent-dot">.</span></p>
-        <!-- TODO(zhunbei): replace pitch below with your own 2–3 sentence positioning statement -->
-        <p class="hero-pitch reveal">
-          <span class="todo">Final-year student focused on applied machine learning — from training
-          generative models on medical imaging data to shipping data-driven products.
-          Based in Kuala Lumpur, open to AI/ML and data roles across Malaysia and Singapore.</span>
-        </p>
-        <div class="hero-actions reveal">
-          <a class="btn btn-primary" href="#projects">View my work</a>
-          <!-- TODO(zhunbei): point this at your exported resume PDF once added to assets/ -->
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
-        <ul class="hero-social reveal" aria-label="Links">
-          <!-- TODO(zhunbei): verify handle & fill email / LinkedIn -->
-          <li><a class="social-link" href="https://github.com/chukun881" target="_blank" rel="noopener">GitHub <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg></a></li>
-          <li><a class="social-link" href="mailto:TODO-your@email.com">Email <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
-          <li><a class="social-link" href="https://www.linkedin.com/in/TODO-your-handle" target="_blank" rel="noopener">LinkedIn <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.4v6.3zM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1zM7.1 20.4H3.6V9h3.5v11.4z"/></svg></a></li>
-        </ul>
-      </div>
-      <a class="scroll-hint" href="#about" aria-label="Scroll to About">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14m0 0l-6-6m6 6l6-6"/></svg>
-      </a>
-    </section>
 
-    <!-- ============ About ============ -->
-    <section id="about" class="section">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-num" aria-hidden="true">01</span>
-          <h2>About me</h2>
-        </header>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <!-- TODO(zhunbei): body copy — draft from your two resumes, tell one story -->
-            <p><span class="todo">Two or three short paragraphs: who you are, what you work on
-              (ML / data), what you are looking for. Written for the web, not a resume dump —
-              first person, direct, specific.</span></p>
-            <ul class="about-facts">
-              <li><span class="fact-label">Location</span> Kuala Lumpur, Malaysia</li>
-              <li><span class="fact-label">Focus</span> <span class="todo">ML engineering · data science</span></li>
-              <li><span class="fact-label">Status</span> <span class="todo">Final-year student, open to AI/ML & data roles</span></li>
-            </ul>
+    <!-- ============ Masthead / abstract ============ -->
+    <section class="masthead">
+      <div class="container masthead-grid">
+        <div class="masthead-text">
+          <p class="eyebrow reveal">Portfolio — 2026 · Kuala Lumpur, Malaysia</p>
+          <h1 class="masthead-title reveal" style="--d:.08s">Yew Chu Kun</h1>
+          <p class="masthead-role reveal" style="--d:.16s">AI engineer &amp; data scientist</p>
+          <div class="abstract reveal" style="--d:.24s">
+            <p>Recent Computer Science (Data Science) graduate from University Malaysia Sabah. For
+            the past six months I worked as an AI Engineer intern at Synoteca Digital in Kuala
+            Lumpur — rebuilding a RAG search service until it answered in ~300&nbsp;ms instead of
+            2–3&nbsp;minutes, and putting an LLM support agent into production on WhatsApp and
+            Telegram.</p>
+            <p>My final-year project trained a GAN on 6,400 MRI slices to detect Alzheimer&rsquo;s
+            early. The synthetic data made every classifier worse — and that negative finding,
+            fully documented in a 173-page thesis, is the result I&rsquo;m proudest of. I&rsquo;d
+            rather report what happened than ship a lucky number.</p>
           </div>
-          <div class="about-side reveal">
-            <figure class="portrait-card">
-              <!-- TODO(zhunbei): compressed webp of profile-picture.jpg goes here -->
-              <div class="portrait-placeholder" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg>
-                <span>portrait</span>
-              </div>
-              <figcaption class="sr-only">Portrait of Yew Chu Kun</figcaption>
-            </figure>
-            <div class="skill-groups">
-              <!-- TODO(zhunbei): real tech stack chips -->
-              <p class="skill-group-title">Toolbox</p>
-              <ul class="chips">
-                <li class="todo">Python</li><li class="todo">PyTorch</li><li class="todo">TensorFlow</li>
-                <li class="todo">scikit-learn</li><li class="todo">SQL</li><li class="todo">Pandas</li>
-              </ul>
-            </div>
-          </div>
+          <p class="factline reveal" style="--d:.32s">Based in Kuala Lumpur &nbsp;·&nbsp; from Kota Kinabalu, Sabah &nbsp;·&nbsp; EN · BM · 中文 · Español</p>
+          <ul class="chips reveal" style="--d:.4s">
+            <li><a href="mailto:chukunyew789@gmail.com">chukunyew789@gmail.com</a></li>
+            <li><a href="https://github.com/chukun881" target="_blank" rel="noopener">github.com/chukun881&nbsp;↗</a></li>
+          </ul>
         </div>
+
+        <figure class="portrait reveal" style="--d:.2s">
+          <img src="assets/portrait.jpg" alt="Portrait of Yew Chu Kun" width="551" height="787" />
+          <figcaption>Fig. 0 — the author · Kuala Lumpur, 2026</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ============ Projects ============ -->
-    <section id="projects" class="section section-alt">
+    <!-- ============ 1 · Work ============ -->
+    <section id="work" class="section">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-num" aria-hidden="true">02</span>
-          <h2>Selected projects</h2>
+          <span class="section-tag">§ 1</span>
+          <h2>Selected work</h2>
         </header>
-        <div class="project-grid">
-          <!-- TODO(zhunbei): replace all card copy with real project details -->
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-a" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-label">Final-year project</p>
-              <h3 class="project-title">Alzheimer's Detection with GANs</h3>
-              <p class="project-desc"><span class="todo">Generative adversarial networks for
-                medical imaging on Alzheimer's data — what you built, the negative finding,
-                and what it taught you. Keep it honest; recruiters like real results.</span></p>
-              <ul class="chips chips-sm">
-                <li>Python</li><li>PyTorch</li><li>GANs</li><li>Medical imaging</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" onclick="return false">GitHub <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-                <a href="#" onclick="return false">Write-up <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-            </div>
+
+        <article class="figure-card featured reveal">
+          <div class="featured-text">
+            <p class="fig-head">Fig. 1 — Final-year project · University Malaysia Sabah · 2025–26</p>
+            <h3 class="fig-title">Early detection of Alzheimer&rsquo;s disease with generative AI</h3>
+            <p class="fig-body">A class-conditional DCGAN — 11.6M-parameter generator, 1,000 epochs
+            on an RTX&nbsp;2060 — synthesized MRI slices to fight a 50:1 class imbalance. Three
+            transfer-learning classifiers (VGG16, DenseNet201, InceptionV3) were each tuned over
+            ~60 Optuna Bayesian trials, evaluated leakage-safe: synthetic slices in training
+            only.<span class="fn-mark" aria-hidden="true">†</span></p>
+            <p class="tech">Python · PyTorch · DCGAN · Optuna · FID / Inception Score</p>
+          </div>
+          <div class="featured-table">
+            <p class="table-caption">Table 1 — study at a glance</p>
+            <table class="spec">
+              <tbody>
+                <tr><th scope="row">MRI slices</th><td>6,400</td></tr>
+                <tr><th scope="row">Diagnostic classes</th><td>4</td></tr>
+                <tr><th scope="row">Class imbalance</th><td>50 : 1</td></tr>
+                <tr><th scope="row">Classifiers</th><td>VGG16 · DenseNet201 · InceptionV3</td></tr>
+                <tr><th scope="row">Tuning</th><td>~60 Optuna trials per model</td></tr>
+                <tr class="row-best"><th scope="row">Best test accuracy</th><td>93.75%</td></tr>
+                <tr><th scope="row">GAN augmentation</th><td>−7 to −12 pp<sup aria-hidden="true">†</sup></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="figure-grid">
+          <article class="figure-card reveal">
+            <p class="fig-head">Fig. 2 — Synoteca Digital · internship · 2026</p>
+            <h3 class="fig-title">RAG search, rebuilt 400× faster</h3>
+            <p class="stat-line">2–3 min <span class="stat-arrow" aria-hidden="true">→</span> ~300 ms <span class="stat-x">≈400×</span></p>
+            <p class="fig-body">Merged embedding and vector search into one persistent Milvus Lite
+            process, removed the MCP dependency, and migrated from Zilliz Cloud to local storage.
+            I ran the before/after benchmarks myself.</p>
+            <p class="tech">Milvus Lite · embeddings · benchmarking</p>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-b" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-label">Competition · 1st place</p>
-              <h3 class="project-title">Borneo Hackathon 2024 — Winner</h3>
-              <p class="project-desc"><span class="todo">What the team built, your role, the
-                problem it solved, and the result. One tight paragraph.</span></p>
-              <ul class="chips chips-sm">
-                <li>TODO</li><li>team of N</li><li>48h build</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" onclick="return false">Details <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-            </div>
+          <article class="figure-card reveal">
+            <p class="fig-head">Fig. 3 — Synoteca Digital · internship · 2026</p>
+            <h3 class="fig-title">LLM support agent in production</h3>
+            <p class="fig-body">Deployed the SynoClaw agent to WhatsApp and Telegram with custom
+            slash commands (<span class="mono-inline">/contact</span>, <span class="mono-inline">/help</span>),
+            guarded by NeMoGuardrails safety filtering — 100% of harmful-content test cases
+            passed — and wired Grafana dashboards for latency and token usage.</p>
+            <p class="tech">LLM agents · NeMoGuardrails · Grafana APM · WhatsApp &amp; Telegram APIs</p>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-c" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-label">Project</p>
-              <h3 class="project-title todo">[Project three]</h3>
-              <p class="project-desc"><span class="todo">Pick from your internship work, coursework
-                or personal builds — the one with the most interesting technical story.</span></p>
-              <ul class="chips chips-sm"><li>TODO</li></ul>
-              <div class="project-links"></div>
-            </div>
+          <article class="figure-card reveal">
+            <p class="fig-head">Fig. 4 — coursework · text mining</p>
+            <h3 class="fig-title">IMDB review sentiment classifier</h3>
+            <p class="fig-body">Tokenization, stop-word removal and TF-IDF features over the IMDB
+            reviews corpus — small, honest coursework.</p>
+            <p class="tech">scikit-learn · TF-IDF · NLP</p>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-thumb thumb-d" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-label">Project</p>
-              <h3 class="project-title todo">[Project four]</h3>
-              <p class="project-desc"><span class="todo">Optional fourth slot — cut this card if
-                three is enough.</span></p>
-              <ul class="chips chips-sm"><li>TODO</li></ul>
-              <div class="project-links"></div>
-            </div>
-          </article>
+          <aside class="footnote reveal">
+            <p><span class="fn-mark" aria-hidden="true">†</span> Measured with FID 119.9 and
+            Inception Score 1.55: adding GAN-synthetic slices lowered accuracy by 7–12 percentage
+            points across all three classifiers. Reported as-is in the 173-page thesis — a result
+            I trust more than a lucky one.</p>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- ============ Experience ============ -->
-    <section id="experience" class="section">
+    <!-- ============ 2 · Experience ============ -->
+    <section id="experience" class="section section-alt">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-num" aria-hidden="true">03</span>
+          <span class="section-tag">§ 2</span>
           <h2>Experience</h2>
         </header>
-        <ol class="timeline">
-          <!-- TODO(zhunbei): entries from your intern logbook / resumes -->
-          <li class="timeline-item reveal">
-            <div class="timeline-meta">
-              <p class="timeline-date todo">20XX — 20XX</p>
-            </div>
-            <div class="timeline-body">
-              <h3 class="timeline-title"><span class="todo">Internship — Company Name</span></h3>
-              <p class="timeline-role todo">Machine Learning Intern</p>
-              <p class="timeline-desc"><span class="todo">Two or three bullet-worthy lines: what you
-                owned, what stack, what improved because of you.</span></p>
-            </div>
-          </li>
-          <li class="timeline-item reveal">
-            <div class="timeline-meta">
-              <p class="timeline-date todo">20XX — 20XX</p>
-            </div>
-            <div class="timeline-body">
-              <h3 class="timeline-title"><span class="todo">Role — Organisation</span></h3>
-              <p class="timeline-role todo">Part-time / committee / TA etc.</p>
-              <p class="timeline-desc"><span class="todo">Optional second entry.</span></p>
+        <ol class="xp-list">
+          <li class="xp-item reveal">
+            <p class="xp-date">Mar – Aug 2026</p>
+            <div class="xp-body">
+              <h3 class="xp-title">AI Engineer Intern — Synoteca Digital</h3>
+              <p class="xp-meta">Kuala Lumpur · on-site</p>
+              <ul class="xp-bullets">
+                <li>Cleansed and standardized messy POI datasets powering the Syno AIdea app; wrote the end-user guide.</li>
+                <li>Cut retrieval latency ~400× by consolidating the embedding and vector-search pipeline <a href="#work">(Fig.&nbsp;2)</a>.</li>
+                <li>Prototyped multilingual HR-recruitment automation — scanned documents and emails ingested via an MCP mail server, each workload routed to the best-suited LLM.</li>
+                <li>Authored 10+ internal guides, delivered 3 live presentations, onboarded 3 teammates with full handover.</li>
+              </ul>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============ Certifications ============ -->
-    <section id="certifications" class="section section-alt">
+    <!-- ============ 3 · Education & credentials ============ -->
+    <section id="education" class="section">
       <div class="container">
         <header class="section-head reveal">
-          <span class="section-num" aria-hidden="true">04</span>
-          <h2>Certifications &amp; awards</h2>
+          <span class="section-tag">§ 3</span>
+          <h2>Education &amp; credentials</h2>
         </header>
-        <ul class="cert-list">
-          <li class="cert-row reveal">
-            <svg class="icon cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg>
-            <div class="cert-body">
-              <h3>Huawei HCIA-AI</h3>
-              <p class="cert-meta">Huawei · Certified · <span class="todo">year</span></p>
-            </div>
-            <!-- TODO(zhunbei): verify before making public — do not hotlink the raw certificate -->
-            <a class="cert-link" href="assets/certs/hcia-ai.pdf" target="_blank" rel="noopener">View <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-          </li>
-          <li class="cert-row reveal">
-            <svg class="icon cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg>
-            <div class="cert-body">
-              <h3>Borneo Hackathon 2024 — First Place</h3>
-              <p class="cert-meta">Team competition · 2024</p>
-            </div>
-            <a class="cert-link" href="assets/certs/borneo-2024.pdf" target="_blank" rel="noopener">View <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-          </li>
-          <!-- TODO(zhunbei): more rows if any -->
-        </ul>
+        <div class="edu-grid">
+          <div class="edu-block reveal">
+            <p class="xp-date">2022 – 2026</p>
+            <h3 class="xp-title">University Malaysia Sabah</h3>
+            <p class="xp-meta">Bachelor of Computer Science with Honours (Data Science) · CGPA 3.4</p>
+            <p class="fig-body">Coursework (A/A−): Machine Learning, Artificial Intelligence, Text Mining, Database.</p>
+          </div>
+          <ul class="cert-list">
+            <li class="cert-row reveal">
+              <svg class="icon cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg>
+              <div class="cert-body">
+                <h3>Huawei HCIA-AI</h3>
+                <p class="cert-meta">Huawei · certified</p>
+              </div>
+              <a class="cert-link" href="assets/certs/huawei-hcia-ai.pdf" target="_blank" rel="noopener">View PDF&nbsp;↗</a>
+            </li>
+            <li class="cert-row reveal">
+              <svg class="icon cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/></svg>
+              <div class="cert-body">
+                <h3>Champion — Borneo Hackathon 2024</h3>
+                <p class="cert-meta">UMS · Sabah SCEIC &amp; KSTI · Nov 2024</p>
+              </div>
+              <a class="cert-link" href="assets/certs/borneo-hackathon-2024.pdf" target="_blank" rel="noopener">View PDF&nbsp;↗</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ============ Contact ============ -->
-    <section id="contact" class="section contact">
+    <!-- ============ 4 · Correspondence ============ -->
+    <section id="contact" class="section section-alt contact">
       <div class="container contact-inner">
         <header class="section-head reveal">
-          <span class="section-num" aria-hidden="true">05</span>
-          <h2>Get in touch</h2>
+          <span class="section-tag">§ 4</span>
+          <h2>Correspondence</h2>
         </header>
-        <p class="contact-pitch reveal">
-          <span class="todo">One friendly line — e.g. hiring for an ML or data role, or want to
-          talk shop about generative models? My inbox is open.</span>
-        </p>
-        <!-- TODO(zhunbei): real email address -->
-        <a class="btn btn-primary btn-lg reveal" href="mailto:TODO-your@email.com">Say hello</a>
+        <p class="contact-pitch reveal">Hiring for an AI/ML or data role — or want to talk about
+        generative models that fail honestly? My inbox is open.</p>
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" href="mailto:chukunyew789@gmail.com">chukunyew789@gmail.com</a>
+          <a class="btn btn-ghost" href="https://github.com/chukun881" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+        </div>
       </div>
     </section>
   </main>
@@ -275,7 +236,8 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Yew Chu Kun</p>
-      <p class="footer-note">Plain HTML / CSS / JS · hosted on Vercel</p>
+      <p class="footer-coords">Kota Kinabalu 5.98°&nbsp;N, 116.07°&nbsp;E &nbsp;→&nbsp; Kuala Lumpur</p>
+      <p>Hand-built HTML/CSS · hosted on Vercel</p>
     </div>
   </footer>
 </body>

@@ -1,61 +1,39 @@
 # Yew Chu Kun — Portfolio
 
-Personal portfolio site. Plain HTML / CSS / JS — no framework, no build step,
-no dependencies. Hosted on Vercel from this GitHub repository.
+Personal portfolio site, designed as a "lab report": the visual language of a
+research thesis — figure captions, a spec table, a real footnote. Plain
+HTML / CSS / JS, no framework, no build step.
+
+- **Live:** https://chukun-portfolio.vercel.app
+- **Repo:** https://github.com/chukun881/portfolio
 
 ## Structure
 
 ```
-portfolio/
-├── index.html      All content lives here (single page)
-├── style.css       Design system + themes (dark/light, follows OS)
-├── script.js       Theme toggle, mobile nav, scroll reveals
-├── assets/
-│   ├── favicon.svg
-│   ├── portrait.webp      (to add — compressed profile picture)
-│   └── certs/             (to add — certificate PDFs to link)
-└── README.md
+├── index.html            All content (single page)
+├── style.css             Design tokens, light/dark "night lab" theme
+├── script.js             Theme toggle, mobile nav, scroll reveals
+└── assets/
+    ├── favicon.svg
+    ├── portrait.jpg      Author photo (compressed)
+    └── certs/            Certificate PDFs linked from § 3
 ```
 
-## Editing content
+## Update flow
 
-Everything is in `index.html`. While the site is being filled in, unfinished
-copy is marked two ways:
-
-- HTML comments: `<!-- TODO(zhunbei): ... -->`
-- Visible amber highlights: any element with class `todo`
-
-Search for either before going live:
-
-```bash
-grep -n "TODO\|class=\"todo\"\|class=.todo" index.html
-```
-
-When a piece of content is finalised, replace it and **remove the `todo`
-class** so the amber highlight disappears. The site is ready to publish when
-that grep returns nothing.
+1. Edit `index.html` (content) / `style.css` (design)
+2. `git add . && git commit -m "..." && git push`   → version history on GitHub
+3. `vercel deploy --prod`                            → live in ~30 s, same URL
 
 ## Local preview
 
 ```bash
-cd portfolio
-python3 -m http.server 4173 --bind 127.0.0.1
-# → http://localhost:4173
+python3 -m http.server 4174 --bind 127.0.0.1
+# → http://localhost:4174
 ```
 
-Opening `index.html` directly also works.
+## Facts policy
 
-## Deploy
-
-The repo is connected to Vercel: every `git push` to `main` auto-deploys.
-
-```bash
-git add .
-git commit -m "update content"
-git push
-```
-
-## Credits
-
-Built by hand (Claude Code + Yew Chu Kun). Fonts: Space Grotesk & Inter
-(Google Fonts, self-hosted fallback to system fonts).
+Every number on this page (6,400 slices, 50:1, 93.75%, ~400×, −7 to −12 pp)
+comes straight from the thesis or internship record. If a number can't be
+sourced, it doesn't go on the page.
