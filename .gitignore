@@ -7,3 +7,4 @@
 
 # Local dev
 node_modules/
+.vercel
