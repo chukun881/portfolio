@@ -51,6 +51,7 @@
 
     <!-- ============ Masthead / abstract ============ -->
     <section class="masthead">
+      <canvas id="lab-grid" aria-hidden="true"></canvas>
       <div class="container masthead-grid">
         <div class="masthead-text">
           <p class="eyebrow reveal">Portfolio — 2026 · Kuala Lumpur, Malaysia</p>
@@ -76,10 +77,21 @@
 
         <figure class="portrait reveal" style="--d:.2s">
           <img src="assets/portrait.jpg" alt="Portrait of Yew Chu Kun" width="551" height="787" />
+          <span class="scan" aria-hidden="true"><span class="scan-readout">slice 064 / 128 · axial</span></span>
           <figcaption>Fig. 0 — the author · Kuala Lumpur, 2026</figcaption>
         </figure>
       </div>
     </section>
+
+    <!-- ============ Instrument strip ============ -->
+    <div class="statstrip">
+      <dl class="stats container">
+        <div class="stat reveal"><dt>MRI slices, one thesis</dt><dd><span data-count="6400" data-format="comma">0</span></dd></div>
+        <div class="stat reveal" style="--d:.1s"><dt>best test accuracy</dt><dd><span data-count="93.75" data-decimals="2" data-suffix="%">0%</span></dd></div>
+        <div class="stat reveal" style="--d:.2s"><dt>faster retrieval, measured</dt><dd><span data-prefix="≈" data-count="400" data-suffix="×">≈0×</span></dd></div>
+        <div class="stat reveal" style="--d:.3s"><dt>pages, negative finding included</dt><dd><span data-count="173">0</span></dd></div>
+      </dl>
+    </div>
 
     <!-- ============ 1 · Work ============ -->
     <section id="work" class="section">
@@ -113,6 +125,15 @@
                 <tr><th scope="row">GAN augmentation</th><td>−7 to −12 pp<sup aria-hidden="true">†</sup></td></tr>
               </tbody>
             </table>
+            <div class="gauge">
+              <div class="gauge-track" role="presentation">
+                <span class="gauge-tick" style="left:25%"></span>
+                <span class="gauge-tick" style="left:50%"></span>
+                <span class="gauge-tick" style="left:75%"></span>
+                <span class="gauge-fill" data-fill="93.75"></span>
+              </div>
+              <div class="gauge-labels" role="presentation"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
+            </div>
           </div>
         </article>
 

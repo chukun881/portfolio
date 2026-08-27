@@ -522,6 +522,184 @@ a { color: inherit; }
   .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
+/* ============================================================
+   Interactive layer — sensor grid, stat strip, gauge, scan,
+   cursor ring, motion polish. All guarded for reduced motion.
+   ============================================================ */
+
+/* Masthead canvas */
+.masthead { position: relative; overflow: hidden; }
+#lab-grid {
+  position: absolute; inset: 0; z-index: 0;
+  pointer-events: none;
+}
+.masthead-grid { position: relative; z-index: 1; }
+
+/* ---------- Stat strip ---------- */
+.statstrip {
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--hairline);
+  background: var(--bg);
+}
+.stats {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.stat { text-align: center; display: flex; flex-direction: column-reverse; }
+.stat dd {
+  margin: 0;
+  font-family: var(--mono); font-weight: 600;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  color: var(--pine);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.stat dt {
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+.stat + .stat { border-left: 1px solid var(--hairline); }
+
+/* ---------- Accuracy gauge ---------- */
+.gauge { margin-top: 1.4rem; }
+.gauge-track {
+  position: relative;
+  height: 8px;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.gauge-fill {
+  position: absolute; inset: 0 auto 0 0;
+  width: 0;
+  background: var(--pine);
+  border-radius: 3px 0 0 3px;
+  transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gauge-tick {
+  position: absolute; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--hairline);
+}
+.gauge-labels {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 0.62rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Portrait scan overlay ---------- */
+.portrait { position: relative; }
+.portrait .scan {
+  position: absolute; top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portrait .scan::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: -8%;
+  height: 2px;
+  background: var(--pine);
+  box-shadow: 0 0 12px 2px var(--pine-tint), 0 0 3px var(--pine);
+  opacity: 0.85;
+}
+.portrait .scan::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 3px,
+    var(--pine-tint) 3px 4px
+  );
+  opacity: 0.5;
+}
+.portrait:hover .scan, .portrait:focus-within .scan { opacity: 1; }
+.portrait:hover .scan::before { animation: scan-sweep 2.6s linear infinite; }
+.scan-readout {
+  position: absolute; left: 0.6rem; bottom: 0.5rem;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent-contrast);
+  background: color-mix(in srgb, var(--ink) 72%, transparent);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  z-index: 1;
+}
+@keyframes scan-sweep {
+  from { top: -4%; }
+  to { top: 102%; }
+}
+
+/* ---------- Cursor ring ---------- */
+.cursor-ring {
+  position: fixed; top: 0; left: 0; z-index: 200;
+  width: 26px; height: 26px;
+  border: 1.5px solid var(--pine);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+.cursor-ring.is-on { opacity: 0.55; }
+.cursor-ring.is-hot {
+  width: 40px; height: 40px;
+  opacity: 0.9;
+  border-color: var(--pine-deep);
+}
+@media (pointer: coarse) { .cursor-ring { display: none; } }
+
+/* ---------- Motion polish ---------- */
+.section-head::after {
+  transform-origin: left center;
+  transform: scaleX(0) translateY(-0.4rem);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.section-head.is-visible::after { transform: scaleX(1) translateY(-0.4rem); }
+
+.figure-card .fig-head { transition: color 0.25s ease; }
+.figure-card:hover .fig-head { color: var(--pine); }
+
+.figure-grid .figure-card:nth-child(2) { transition-delay: 0.08s; }
+.figure-grid .figure-card:nth-child(3) { transition-delay: 0.16s; }
+.figure-grid .figure-card:nth-child(4) { transition-delay: 0.24s; }
+
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: "";
+  position: absolute; left: 0; right: 100%; bottom: -4px;
+  height: 2px;
+  background: var(--pine);
+  transition: right 0.25s ease;
+}
+.nav-links a:hover::after, .nav-links a[aria-current="true"]::after { right: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gauge-fill { transition: none; }
+  .portrait:hover .scan::before { animation: none; top: 30%; }
+  .section-head::after, .section-head.is-visible::after { transform: scaleX(1) translateY(-0.4rem); transition: none; }
+  .nav-links a::after { transition: none; }
+  .stat dd { font-variant-numeric: tabular-nums; }
+}
+
+/* ---------- Responsive (interactive layer) ---------- */
+@media (max-width: 760px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.8rem 1rem; }
+  .stat + .stat { border-left: none; }
+  .stat:nth-child(even) { border-left: 1px solid var(--hairline); }
+  .stat dd { font-size: 1.6rem; }
+  #lab-grid { display: none; }
+}
+
+
 @media (max-width: 760px) {
   body { font-size: 16px; }
   .section { padding: 4rem 0; }
