@@ -243,7 +243,7 @@ a { color: inherit; }
 .portrait { margin: 0; justify-self: end; width: min(100%, 340px); }
 .portrait img {
   display: block; width: 100%;
-  aspect-ratio: 4 / 5; object-fit: cover;
+  height: auto;
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 6px;                       /* printed-photo mat */
